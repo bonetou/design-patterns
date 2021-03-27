@@ -13,5 +13,5 @@ if __name__ == '__main__':
 
     calculadora = CalculadoraImpostos()
     orcamento = Orcamento(500)
-    calculadora.realiza_calculo(orcamento, ISS)
-    calculadora.realiza_calculo(orcamento, ICMS)
+    calculadora.realiza_calculo(orcamento, ISS())
+    calculadora.realiza_calculo(orcamento, ICMS())
