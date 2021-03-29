@@ -9,14 +9,17 @@ class TemplateDeImpostoCondicional:
             return self.maxima_taxacao(orcamento)
         return self.minima_taxacao(orcamento)
 
+    @abstractmethod
     def usar_maxima_taxacao(self, orcamento):
         return orcamento.valor > 500
 
-    # def maxima_taxacao(self, orcamento):
-    #     return orcamento.valor * 0.07
-    
-    # def minima_taxacao(self, orcamento):
-    #     return orcamento.valor * 0.05
+    @abstractmethod
+    def maxima_taxacao(self, orcamento):
+        return orcamento.valor * 0.07
+        
+    @abstractmethod
+    def minima_taxacao(self, orcamento):
+        return orcamento.valor * 0.05
 
 class ISS:
     def calcula(self, orcamento):
